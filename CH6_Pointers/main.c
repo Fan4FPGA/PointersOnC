@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 #include "reverseStr.h"
-
+#include "del_substr.h"
 int strlen1(char *str)
 {
     int length0 = 0;
@@ -69,7 +69,7 @@ char *find_char( char* const source, char* const chars)
     
 }
 
-#define TEST4
+#define TEST5
 void main()
 {
 #ifdef TEST1
@@ -110,5 +110,14 @@ printf("Begin:%s\n",AA);
 reverse_string(&AA[0]);
 printf("%s",AA);
 
+#endif
+
+
+#ifdef TEST5
+
+    char AA[] = "abcdefghigk";
+    char BB[] = "fgh";
+    printf("result is : %d\n",del_substr(AA, BB));
+    printf("%s\n",AA);
 #endif
 }
