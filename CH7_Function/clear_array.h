@@ -1,0 +1,1 @@
+void clear_array(int array[],int n_elements);
